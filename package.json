@@ -1,0 +1,10 @@
+{
+  "name": "jots-media-website",
+  "version": "2.0.0",
+  "private": true,
+  "description": "JOTS.MEDIA static portfolio — GitHub Pages ready",
+  "scripts": {
+    "check": "node --check app.js && node --check assembly.js && python3 scripts/check_site.py",
+    "build": "npm run check && node scripts/build.mjs"
+  }
+}
