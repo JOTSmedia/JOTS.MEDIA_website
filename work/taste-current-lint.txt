@@ -1,0 +1,51 @@
+TASTESKILL · LINT   7 file(s)
+
+FAIL
+  [numbering] Decorative index numbering (01 / 02 / 03).  (3×)
+      index.html:31  >08<
+      index.html:32  >01<
+      index.html:55  >01<
+  [shadow] Shadow. Elements at rest carry none; only real overlays (menu, dialog, sticky bar) may.  (16×)
+      styles.css:3  box-shadow:
+      styles.css:4  box-shadow:
+      styles.css:108  box-shadow:
+      styles.css:124  box-shadow:
+      styles.css:127  box-shadow:
+      styles.css:204  box-shadow:
+      … 10 more
+  [hairline] Thin rule / divider line. Separate with space, tone or scale; lines belong to real tables and form fields.  (7×)
+      styles.css:3  border-bottom:1px
+      styles.css:6  border-top:1px
+      styles.css:7  border-top:1px
+      styles.css:8  border-top:1px
+      styles.css:106  border-bottom:1px
+      styles.css:124  border-bottom:1px
+      … 1 more
+  [gradient] Gradient fill. Use a flat colour or a real image (a neutral scrim over a photo is the one exception).  (15×)
+      styles.css:7  linear-gradient(
+      styles.css:56  linear-gradient(
+      styles.css:58  linear-gradient(
+      styles.css:155  radial-gradient(
+      styles.css:156  radial-gradient(
+      styles.css:204  linear-gradient(
+      … 9 more
+
+WARN
+  [outlined-box] A 1px outlined box. Prefer a filled surface or no box.  (5×)
+      styles.css:4  border:1px solid
+      styles.css:8  border:1px solid
+      styles.css:9  border:1px solid
+      styles.css:17  border:1px solid
+      styles.css:25  border:1px solid
+  [glass] Backdrop blur. One sticky bar at most; glass cards are a tell.  (6×)
+      styles.css:107  backdrop-filter:
+      styles.css:205  backdrop-filter:
+      styles.css:206  backdrop-filter:
+      section-glass.css:8  backdrop-filter:
+      section-glass.css:23  backdrop-filter:
+      section-glass.css:29  backdrop-filter:
+  [default-font] A default typeface. Use the faces named by the drawn direction.  (1×)
+      typography.css:3  font-family:'Space Grotesk
+
+RESULT: 41 FAIL, 12 WARN — fix the FAILs before rendering.
+Interface fragments marked data-ui keep their own borders and shadows. Any other line that must keep a flagged pattern for a real reason can carry the comment taste-skill-ignore.

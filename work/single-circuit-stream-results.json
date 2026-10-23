@@ -1,0 +1,29 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "viewport": "1440x830",
+      "routeCount": 47,
+      "cycleMs": 4931.156,
+      "sampleCount": 5313,
+      "maxHeadArcs": 2,
+      "visibleFrames": 4606,
+      "hiddenFrames": 707,
+      "wrapTailFrames": 92,
+      "maxTailSpans": 4,
+      "finiteCanvasCalls": 750292
+    },
+    {
+      "viewport": "390x788",
+      "routeCount": 47,
+      "cycleMs": 4931.156,
+      "sampleCount": 5313,
+      "maxHeadArcs": 2,
+      "visibleFrames": 3988,
+      "hiddenFrames": 1325,
+      "wrapTailFrames": 92,
+      "maxTailSpans": 3,
+      "finiteCanvasCalls": 537685
+    }
+  ]
+}

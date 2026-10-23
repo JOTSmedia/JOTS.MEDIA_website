@@ -1,0 +1,191 @@
+[
+  {
+    "t": 451,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 904,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 1356,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 1807,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 2258,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 2711,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 3163,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 3615,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 4066,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 4518,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 4971,
+    "auto": "waiting",
+    "canvases": 1,
+    "chip": "flowing",
+    "intro": "true",
+    "phase": "flowing",
+    "y": 0
+  },
+  {
+    "t": 5422,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "charging",
+    "intro": "true",
+    "phase": "white-launch",
+    "y": 1.5
+  },
+  {
+    "t": 5873,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "charging",
+    "intro": "true",
+    "phase": "white-launch",
+    "y": 10.5
+  },
+  {
+    "t": 6325,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "exploding",
+    "intro": "true",
+    "phase": "white-launch",
+    "y": 26
+  },
+  {
+    "t": 6776,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "exploding",
+    "intro": "true",
+    "phase": "white-launch",
+    "y": 42
+  },
+  {
+    "t": 7227,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "exploding",
+    "intro": "true",
+    "phase": "white-launch",
+    "y": 57.5
+  },
+  {
+    "t": 7679,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "exploding",
+    "intro": "true",
+    "phase": "white-launch",
+    "y": 73.5
+  },
+  {
+    "t": 8132,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "exploding",
+    "intro": "true",
+    "phase": "white-launch",
+    "y": 89
+  },
+  {
+    "t": 8583,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "exploding",
+    "intro": "true",
+    "phase": "white-launch",
+    "y": 105
+  },
+  {
+    "t": 9034,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "dispersed",
+    "intro": "true",
+    "phase": "darkening",
+    "y": 121
+  },
+  {
+    "t": 9486,
+    "auto": "running",
+    "canvases": 1,
+    "chip": "dispersed",
+    "intro": "true",
+    "phase": "darkening",
+    "y": 136.5
+  }
+]
