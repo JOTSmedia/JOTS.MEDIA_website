@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 210" role="img" aria-label="JOTS.MEDIA — Modern Media Solutions">
+  <!-- CONCEPT 2 — PURE WORDMARK (type only, fully monochrome) | light bg
+       Site font, weight 300, wide tracking. Hairline rule + strapline = "studio" feel.
+       Dark bg: change all #0A0A0A -> #FAFAFA. Delete rule + strapline for the bare wordmark. -->
+  <rect width="760" height="210" fill="none"/>
+  <text x="380" y="100" text-anchor="middle"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="300" font-size="58" letter-spacing="11"
+        fill="#0A0A0A">JOTS.MEDIA</text>
+  <line x1="232" y1="128" x2="528" y2="128" stroke="#0A0A0A" stroke-width="1"/>
+  <text x="382" y="150" text-anchor="middle"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="300" font-size="13" letter-spacing="11"
+        fill="#0A0A0A" opacity="0.7">MODERN MEDIA SOLUTIONS</text>
+</svg>
