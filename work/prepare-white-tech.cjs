@@ -1,0 +1,3 @@
+const fs=require('fs');const sharp=require('/Users/bethrooney/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+const input='/Users/bethrooney/.codex/generated_images/01a1678d-1ad1-7492-9a0b-9e0bb430a457/exec-310651f8-2766-47f8-ac62-6ec535e00d58.png';
+(async()=>{fs.copyFileSync(input,'sources/technology-white-original.png');const metadata=await sharp(input).metadata();console.log({nativeWidth:metadata.width,nativeHeight:metadata.height});for(const width of [640,960,1600,2560,3840])await sharp(input).resize(width,Math.round(width*9/16),{fit:'cover'}).webp({quality:84,effort:5}).toFile(`images/editorial/technology-white-${width}.webp`);})();
