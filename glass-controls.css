@@ -1,0 +1,189 @@
+/* Glass is the interface material: quiet reflections on usable controls.
+   There are no decorative fragments, moving panels, or automatic shimmers. */
+:root{
+  --glass-ink:#142123;
+  --glass-fill:rgba(240,248,248,.88);
+  --glass-reflection:rgba(255,255,255,.72);
+  --glass-edge:rgba(54,91,96,.13);
+  --glass-hover:rgba(209,244,245,.86);
+  --glass-shadow:0 8px 18px -14px rgba(12,35,40,.46);
+}
+[data-tone="dark"]{
+  --glass-ink:#f2fcfd;
+  --glass-fill:rgba(214,244,247,.09);
+  --glass-reflection:rgba(255,255,255,.16);
+  --glass-edge:rgba(209,248,251,.11);
+  --glass-hover:rgba(152,232,240,.17);
+  --glass-shadow:0 8px 18px -14px rgba(0,0,0,.65);
+}
+
+.button,.hero .button-light,.services[data-tone="light"] .button-outline,
+.text-link,.story-toggle,.menu-toggle,.dialog-close,
+.contact[data-tone="dark"] .contact-round{
+  color:var(--glass-ink);
+  background-color:var(--glass-fill);
+  background-image:linear-gradient(155deg,var(--glass-reflection),transparent 58%);
+  border:0;
+  border-radius:0;
+  box-shadow:inset 0 1px 0 var(--glass-reflection),inset 0 -1px 0 var(--glass-edge),var(--glass-shadow);
+  min-height:44px;
+  transition:background-color .2s,color .2s,box-shadow .2s,transform .2s var(--ease);
+}
+.button,.hero .button-light{min-height:52px;padding:15px 22px}
+.hero .button-light{
+  --glass-fill:rgba(247,253,253,.24);
+  --glass-reflection:rgba(255,255,255,.56);
+  --glass-hover:rgba(226,249,249,.52);
+}
+.text-link{padding:11px 16px;gap:22px}
+.story-toggle{padding:8px 12px;min-width:82px}
+.menu-toggle{padding:0 12px;gap:10px}
+.dialog-close{width:44px;height:44px}
+.contact[data-tone="dark"] .contact-round{border-radius:50%}
+
+/* Primary form actions retain a strong, readable smoked-glass surface. */
+dialog .button-dark{
+  --glass-ink:#f2fcfd;
+  --glass-fill:rgba(17,35,38,.94);
+  --glass-reflection:rgba(255,255,255,.17);
+  --glass-edge:rgba(0,0,0,.3);
+  --glass-hover:rgba(19,63,69,.96);
+}
+.hero[data-material-active] .button-light{
+  --glass-ink:rgb(var(--hero-material-ink));
+  --glass-fill:rgb(var(--hero-pane-rgb) / .16);
+  --glass-reflection:rgb(var(--hero-material-shadow) / .32);
+  --glass-edge:rgb(var(--hero-material-ink) / .12);
+  --glass-hover:rgb(var(--hero-pane-rgb) / .3);
+  color:var(--glass-ink);
+  background-color:var(--glass-fill);
+  background-image:linear-gradient(155deg,var(--glass-reflection),transparent 58%);
+}
+
+@supports ((backdrop-filter:blur(12px)) or (-webkit-backdrop-filter:blur(12px))){
+  .button,.text-link,.story-toggle,.menu-toggle,.dialog-close,.contact-round{
+    -webkit-backdrop-filter:blur(10px) saturate(1.12);
+    backdrop-filter:blur(10px) saturate(1.12);
+  }
+  .site-header{
+    background:rgba(250,253,252,.8);
+    -webkit-backdrop-filter:blur(18px) saturate(1.1);
+    backdrop-filter:blur(18px) saturate(1.1);
+  }
+  .mobile-nav{
+    background:rgba(248,252,251,.92);
+    -webkit-backdrop-filter:blur(20px) saturate(1.1);
+    backdrop-filter:blur(20px) saturate(1.1);
+  }
+  dialog{
+    background:rgba(246,251,250,.96);
+    -webkit-backdrop-filter:blur(24px);
+    backdrop-filter:blur(24px);
+  }
+}
+.site-header{
+  border:0;
+  box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #213b4012;
+}
+.site-header.is-scrolled{box-shadow:inset 0 -1px 0 #213b4015,0 8px 22px -19px #142c3b61}
+.site-header nav a{border-radius:0}
+.site-header nav a[aria-current]{background:#007e8a0d;color:#005e68}
+.site-header nav .nav-contact{
+  background:#e7f3f0b3;
+  box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #203f4021;
+}
+.mobile-nav{
+  border:0;
+  box-shadow:inset 0 -1px 0 #fff,0 18px 36px -20px #16313666;
+}
+.mobile-nav a{border:0;min-height:52px;padding:16px 12px;font-size:16px;letter-spacing:.02em}
+.mobile-nav a+a{margin-top:4px}
+.mobile-nav a[aria-current]{background:#047b8910;box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #08728022;color:#005e68}
+
+/* Portfolio frames read as glass instruments; the page preview stays clear. */
+.work[data-tone="dark"] .project-image{border:0;background:#17201b;box-shadow:0 12px 28px -24px #0009}
+.work[data-tone="dark"] .browser-bar,
+.work[data-tone="dark"] .project-controls{
+  background:linear-gradient(155deg,#ecfdff15,#e5ffff03 66%),#162223;
+  color:#d6e8e8;
+  border:0;
+  box-shadow:inset 0 1px 0 #e5ffff26,inset 0 -1px 0 #001b2255;
+}
+.work[data-tone="dark"] .browser-bar{height:32px}
+.work[data-tone="dark"] .browser-bar i{background:#a5bfc1}
+.work[data-tone="dark"] .project-controls{min-height:56px;gap:12px;padding:6px 8px 6px 12px}
+.work[data-tone="dark"] .preview-status{color:#c1d4d5;line-height:1.45}
+.work[data-tone="dark"] .story-toggle{flex-shrink:0;gap:8px;font-size:11px;letter-spacing:.02em}
+.project:focus-within .project-image{box-shadow:0 12px 28px -24px #00c2d499}
+.project-info .preview-button{min-height:44px;margin-top:20px}
+
+/* Selection is the useful motion in the capability list. */
+.service-select{
+  padding:8px 12px;
+  margin-left:-12px;
+  border-radius:0;
+  background:transparent;
+  transition:background-color .2s,color .2s,box-shadow .2s;
+}
+.service-select:after{display:none}
+.service.is-active .service-select{
+  background:linear-gradient(155deg,#ffffffbd,#fff2),#e6f4f2b8;
+  color:#005f69;
+  box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #007c871c;
+}
+dialog{border-radius:0;box-shadow:0 24px 80px -20px #0008,inset 0 1px 0 #fff}
+dialog::backdrop{background:#041113ad;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px)}
+dialog input,dialog textarea{background:#ffffff70;border-color:#66858a70;box-shadow:inset 0 1px 3px #152b360a}
+dialog input::placeholder,dialog textarea::placeholder{color:#4d6165;opacity:1}
+.dialog-close:focus-visible,.button:focus-visible,.text-link:focus-visible,
+.story-toggle:focus-visible,.menu-toggle:focus-visible,.service-select:focus-visible{
+  outline:3px solid #007e8c;
+  outline-offset:4px;
+}
+[data-tone="dark"] :is(.button,.text-link,.story-toggle,.contact-round):focus-visible{outline-color:#43e9f1}
+
+@media(hover:hover){
+  .button:hover,.hero .button-light:hover,.hero[data-material-active] .button-light:hover,
+  .services[data-tone="light"] .button-outline:hover,.text-link:hover,
+  .story-toggle:hover,.menu-toggle:hover,.dialog-close:hover,
+  .contact[data-tone="dark"] .contact-round:hover{
+    color:var(--glass-ink);
+    background-color:var(--glass-hover);
+    background-image:linear-gradient(155deg,var(--glass-reflection),transparent 58%);
+    box-shadow:inset 0 1px 0 var(--glass-reflection),inset 0 -1px 0 var(--glass-edge),0 10px 20px -15px #073d455c;
+    transform:translateY(-1px);
+  }
+  .service-select:hover{background-color:#e8f4f1;color:#005f69}
+  .site-header nav .nav-contact:hover{background:#ceeef0b3}
+  .mobile-nav a:hover{background:#007e8a0d;color:#005e68}
+  .project:hover .project-image{box-shadow:0 12px 28px -24px #00c2d499}
+}
+.button:active,.text-link:active,.story-toggle:active,.menu-toggle:active,
+.dialog-close:active,.contact[data-tone="dark"] .contact-round:active{transform:translateY(1px)}
+button:disabled,.button[aria-disabled="true"]{opacity:.5;transform:none;box-shadow:none}
+
+@media(max-width:700px){
+  .hero .button-light{min-height:48px;padding:13px 18px}
+  .menu-toggle{font-size:11px}
+  .work[data-tone="dark"] .project-controls{padding-inline:10px;gap:8px}
+  .work[data-tone="dark"] .preview-status{max-width:23ch;font-size:11px}
+  .mobile-nav a{font-size:18px}
+}
+/* Opaque fallbacks keep labels readable when transparency is unavailable. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  :root{--glass-fill:#edf6f5}
+  [data-tone="dark"]{--glass-fill:#243739}
+  .hero .button-light,.hero[data-material-active] .button-light{--glass-fill:rgb(var(--hero-pane-rgb,255 255 255) / .88)}
+}
+@media(prefers-reduced-transparency:reduce){
+  :root{--glass-fill:#edf6f5}
+  [data-tone="dark"]{--glass-fill:#243739}
+  .site-header,.mobile-nav,dialog{background:#f6fbfa}
+  .button,.text-link,.story-toggle,.menu-toggle,.dialog-close,.contact-round,
+  .site-header,.mobile-nav,dialog,dialog::backdrop{backdrop-filter:none;-webkit-backdrop-filter:none}
+  .hero .button-light,.hero[data-material-active] .button-light{--glass-fill:rgb(var(--hero-pane-rgb,255 255 255));--glass-reflection:transparent}
+}
+@media(forced-colors:active){
+  .button,.text-link,.story-toggle,.menu-toggle,.dialog-close,.contact-round{border:1px solid ButtonText;background:ButtonFace;color:ButtonText;box-shadow:none}
+  .site-header,.mobile-nav,dialog{background:Canvas;color:CanvasText;box-shadow:none}
+}
