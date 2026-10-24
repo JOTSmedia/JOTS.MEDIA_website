@@ -1,0 +1,2 @@
+// Local, offline all-time flight records. No scores leave the device.
+export function rankedFlights(rows){return (Array.isArray(rows)?rows:[]).filter(r=>r&&typeof r.id==='string'&&typeof r.pilot==='string'&&['score','captures','missions','combo'].every(k=>Number.isFinite(r[k])&&r[k]>=0)).map(r=>({...r,pilot:r.pilot.slice(0,20).toUpperCase()})).sort((a,b)=>b.score-a.score||b.missions-a.missions||b.captures-a.captures).slice(0,25);}

@@ -1,0 +1,1 @@
+export function createStoryVoice(){let current=null;return {play(index,muted=false){this.stop();if(muted||typeof Audio==='undefined')return;current=new Audio(new URL('./assets/voices/reunion-'+index+'.mp3',import.meta.url).href);current.volume=.85;current.play().catch(()=>{});},stop(){if(current){current.pause();current.currentTime=0;current=null;}}};}
