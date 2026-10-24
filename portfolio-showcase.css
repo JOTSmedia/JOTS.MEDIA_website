@@ -1,0 +1,46 @@
+/* An open editorial work wall: every project belongs to the page itself. */
+.work .work-wall{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:clamp(32px,5vw,80px);row-gap:clamp(68px,8vw,120px);align-items:start;margin:0;padding:12px 0 0;overflow:visible}
+.work-wall .project{display:flex;flex-direction:column;min-width:0;scroll-margin-top:calc(var(--nav-height) + 28px)}
+.work-wall .project:nth-child(4n + 2){margin-top:clamp(96px,11vw,160px)}
+.work-wall .project:nth-child(4n + 3){margin-top:28px}
+.work-wall .project:nth-child(4n + 4){margin-top:clamp(108px,9vw,136px)}
+.work-wall .project-image{width:100%;transform:translate3d(0,var(--preview-shift,0px),0);transform-origin:center;transition:box-shadow .25s}
+.work-wall .project-image.is-drifting{will-change:transform}
+.work-wall .project-scroll{aspect-ratio:16/9}
+.work-wall .project-keyframe img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/9}
+.work-wall .project-info{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:0 20px;padding-top:32px}
+.work-wall .project-info h3{grid-column:1/-1;font-family:var(--font-display);font-size:clamp(26px,3vw,46px);font-weight:600;line-height:1.1;letter-spacing:-.035em;min-height:0;margin:0 0 14px}
+.work-wall .project-info h3 a{align-items:flex-start;gap:20px}
+.work-wall .project-info h3 .ui-icon{width:22px;height:22px;margin-top:5px}
+.work-wall .project-info>p{min-height:0;margin:0;max-width:43ch}
+.work-wall .project-info>.project-meta{grid-column:1/-1;font-size:12px;line-height:1.5;margin-bottom:10px}
+.work-wall .project-info>p:not(.project-meta){font-size:15px;line-height:1.65}
+.work-wall .project-info .preview-button{grid-column:2;grid-row:3;align-self:start;white-space:nowrap;margin:0;padding-top:0;border:0;gap:12px;font-size:12px;min-height:44px}
+.work-wall .project-info .preview-button:hover{color:var(--accent)}
+.work-wall :focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+.work-wall .project-scroll:focus-visible{outline-offset:-3px}
+.work .work-note{margin-top:64px;padding-top:0}
+@media(max-width:1100px){
+ .work-wall .project-info{grid-template-columns:1fr}
+ .work-wall .project-info .preview-button{grid-column:1;grid-row:4;justify-self:start;margin-top:12px}
+ .work-wall .project-info h3{font-size:clamp(26px,3.5vw,39px)}
+}
+@media(max-width:700px){
+ .work .work-wall{display:flex;flex-direction:column;gap:64px;padding-top:8px}
+ .work-wall .project,.work-wall .project:nth-child(n){width:100%;margin:0}
+ .work-wall .project-image{width:calc(100% - 12px);align-self:flex-start}
+ .work-wall .project:nth-child(even) .project-image{align-self:flex-end}
+ .work-wall .project-info{display:block;padding-top:27px}
+ .work-wall .project-info h3{font-size:clamp(26px,7.4vw,38px);margin-bottom:12px;line-height:1.1}
+ .work-wall .project-info h3 a{gap:14px}
+ .work-wall .project-info h3 .ui-icon{width:20px;height:20px;margin-top:4px}
+ .work-wall .project-info>.project-meta{font-size:12px;margin-bottom:9px}
+ .work-wall .project-info>p:not(.project-meta){font-size:15px;line-height:1.65;max-width:34ch}
+ .work-wall .project-info .preview-button{margin-top:15px;font-size:12px}
+ .work-wall .browser-bar span{font-size:10px}
+ .work[data-tone="dark"] .work-wall .preview-status{font-size:10px;max-width:22ch}
+ .work[data-tone="dark"] .work-wall .story-toggle{font-size:10px;gap:6px}
+ .work .work-note{font-size:12px;line-height:1.6;margin-top:46px}
+}
+@media(prefers-reduced-motion:reduce){.work-wall .project-image{transform:none!important;will-change:auto!important;transition:none!important}}
+.motion-off .work-wall .project-image{transform:none!important;will-change:auto!important;transition:none!important}
