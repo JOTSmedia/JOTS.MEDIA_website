@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 180" role="img" aria-label="JOTS.MEDIA">
+  <!-- CONCEPT 1 — THE JOT (icon + wordmark) | light bg
+       Site font (Helvetica Neue), weight 300, wide tracking.
+       The period = the jot, the single accent. Detaches as favicon.
+       Dark bg: change #0A0A0A -> #FAFAFA. Pure mono: change #00C2D4 -> #0A0A0A. -->
+  <rect width="760" height="180" fill="none"/>
+  <text x="380" y="108" text-anchor="middle"
+        font-family="'Helvetica Neue', Helvetica, Arial, sans-serif"
+        font-weight="300" font-size="58" letter-spacing="11"
+        fill="#0A0A0A">JOTS<tspan fill="#00C2D4" font-weight="400">.</tspan>MEDIA</text>
+</svg>
